@@ -1,11 +1,10 @@
 const express=require('express')
 const cors =require('cors')
 const mongoose=require('mongoose')
-const url="mongodb+srv://sanjana:UF2IJ4Lje8yGaSHP@skillup.n0kkv8r.mongodb.net/?retryWrites=true&w=majority"
+const url=""   //enter ur mongodb url here
 const app=express()
 app.use(express.json());
 app.use(cors())
-//4mASr9dCUdG0zYWE
 mongoose.connect(url)                            //connecting database 
 const con=mongoose.connection        //taking connection instance into con
 con.on('open',function(){                      //on is an event handler
